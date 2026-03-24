@@ -1,7 +1,7 @@
 def get_discount(user):
-    if user["is_premium"]:
+    if user.get("is_premium"):
         return 0.2
-    if user["coupon"] == "VIP":
+    if user.get("coupon") == "VIP":
         return 0.5
     return None
 
