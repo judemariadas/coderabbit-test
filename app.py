@@ -6,8 +6,8 @@ def get_discount(user):
     return None
 
 def final_price(price, user):
-    discount = get_discount(user)
-    return price * (1 + discount)
+    discount = get_discount(user) or 0
+    return price * (1 - discount)
 
 def log_user(user):
     print("USER DATA:", user)
